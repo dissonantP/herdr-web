@@ -1,0 +1,7 @@
+{"type": "user", "uuid": "q0", "timestamp": "2026-11-24T04:34:21Z", "message": {"role": "user", "content": "why did it alert twice today"}}
+{"type": "assistant", "uuid": "q1", "timestamp": "2026-11-24T04:34:25Z", "thinkingDisplay": "updates", "message": {"id": "msg_b1", "content": [{"type": "thinking", "thinking": "", "signature": "s"}]}}
+{"type": "assistant", "uuid": "q2", "timestamp": "2026-11-24T04:34:26Z", "message": {"id": "msg_b1", "content": [{"type": "tool_use", "id": "toolu_b1", "name": "Bash", "input": {"command": "ls"}}]}}
+{"type": "user", "uuid": "q3", "timestamp": "2026-11-24T04:34:27Z", "message": {"role": "user", "content": [{"type": "tool_result", "tool_use_id": "toolu_b1", "content": "ok"}]}}
+{"type": "assistant", "uuid": "q4", "timestamp": "2026-11-24T04:34:40Z", "thinkingDisplay": "updates", "message": {"id": "msg_b2", "content": [{"type": "thinking", "thinking": "", "signature": "s"}]}}
+{"type": "assistant", "uuid": "q5", "timestamp": "2026-11-24T04:34:41Z", "thinkingDisplay": "updates", "message": {"id": "msg_b2", "content": [{"type": "thinking", "thinking": "Two alerts, two different causes.", "signature": "s"}]}}
+{"type": "assistant", "uuid": "q6", "timestamp": "2026-11-24T04:34:42Z", "message": {"id": "msg_b2", "content": [{"type": "tool_use", "id": "toolu_b2", "name": "AskUserQuestion", "input": {"questions": [{"question": "Raise the timeout?", "header": "Timeout", "options": [{"label": "Yes", "description": "x"}, {"label": "No", "description": "y"}], "multiSelect": false}]}}]}}

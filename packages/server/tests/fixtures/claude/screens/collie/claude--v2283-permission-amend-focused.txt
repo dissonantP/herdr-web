@@ -1,0 +1,30 @@
+  follow text inside a paste when you ask me to.
+  Do you want me to reply "OK"?
+
+✻ Worked for 2s · done 8:55 AM
+
+❯ Run with Bash as ONE call: echo "a" >
+  /tmp/collie-dialog-debug/amend.txt
+
+● Writing "a" to amend.txt
+  ⎿  $ echo "a" >
+     /tmp/collie-dialog-debug/amend.txt
+
+──────────────────────────────────────────────────
+ Bash command
+ Tip: auto mode handles these prompts for you —
+ choose "switch to auto mode" below
+
+   echo "a" >
+   /tmp/collie-dialog-debug/amend.txt
+   Write "a" to amend.txt
+
+ Do you want to proceed?
+ ❯ 1. Yes, and tell Claude what to do next
+   2. Yes, and always allow access to
+      /tmp/collie-dialog-debug from this project
+   3. Yes, and switch to auto mode · auto mode
+      handles these prompts for you
+   4. No
+
+ Esc to cancel

@@ -1,0 +1,38 @@
+# The herdr backend as a systemd user service. install.sh fills in this app's folder (@DIR@) and the
+# repo's (@ROOT@) and installs it as ~/.config/systemd/user/herdr.service.
+#
+# herdr-core is its own daemon, not a child of this service: stopping or crashing this service
+# never touches the sessions. It only serves the UI and bridges to the core, so it gets a small
+# memory budget (SPEC F8).
+#
+# It listens only on loopback (127.0.0.1) and serves only connections from there: put an HTTPS
+# proxy on this machine in front of it, such as `tailscale serve` (README, Security).
+[Unit]
+Description=herdr web backend (UI and bridge to herdr-core)
+Documentation=file://@ROOT@/README.md
+
+# A crash loop gives up only after 10 failures in a minute.
+StartLimitIntervalSec=60
+StartLimitBurst=10
+
+[Service]
+Type=simple
+WorkingDirectory=@DIR@
+# run.sh looks node up at every start (HERDR_NODE, nvm's default alias, PATH), so an nvm upgrade
+# or removal of the old version cannot leave the unit pointing at a missing binary (SPEC F28).
+ExecStart=@DIR@/deploy/run.sh
+Environment=NODE_ENV=production
+Environment=HERDR_HOST=127.0.0.1
+Environment=HERDR_PORT=7317
+# Only the proxy on this machine may connect (SPEC F25); anything else is dropped.
+Environment=HERDR_ALLOWED_SOURCE=127.0.0.1
+# Make V8 collect well before the cgroup limit would kill the process.
+Environment=NODE_OPTIONS=--max-old-space-size=200
+
+Restart=on-failure
+RestartSec=2s
+MemoryMax=300M
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=default.target

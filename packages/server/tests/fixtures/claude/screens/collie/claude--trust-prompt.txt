@@ -1,0 +1,37 @@
+
+   󱍢 Welcome to Bluefin
+
+  󱋩  ghcr.io/ublue-os/bluefin-dx:stable
+
+    Command                                                                                             │ Description
+  ───────────────────────────────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────
+    ujust --choose                                                                                       │ Show available commands
+    ujust toggle-user-motd                                                                               │ Toggle this banner on/off
+    ujust bluefin-cli                                                                                    │ Enable terminal bling
+    brew help                                                                                            │ Manage command line packages
+
+  Help keep Bluefin alive and healthy, consider donating https://docs.projectbluefin.io/donations
+
+  • 󰊤 Issues https://issues.projectbluefin.io
+  • 󰊤 Ask Bluefin https://ask.projectbluefin.io
+  • 󰈙 Documentation https://docs.projectbluefin.io
+
+
+altan in 🌐 bluefin in bad3b8de-6e92-4541-b9cc-4af710c91d88/scratchpad/fixture-sandbox
+❯ claude
+
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Accessing workspace:
+
+ /tmp/claude-1000/-var-home-altan-playground-collie/bad3b8de-6e92-4541-b9cc-4af710c91d88/scratchpad/fixture-sandbox
+
+ Quick safety check: Is this a project you created or one you trust? (Like your own code, a well-known open source project, or work from your team). If not, take a moment to review what's in this folder first.
+
+ Claude Code'll be able to read, edit, and execute files here.
+
+ Security guide
+
+ ❯ 1. Yes, I trust this folder
+   2. No, exit
+
+ Enter to confirm · Esc to cancel

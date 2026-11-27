@@ -1,0 +1,27 @@
+ ▐▛███▛█   Claude Code v2.1.296
+▝▜██████▀  Sonnet 5.5 · Claude Max
+ ▝▝   ▝▝   ~/…/m51-02-lab/project
+
+▎ [✻] [✻] [✻] · Share Claude Code and
+▎ earn $10 in usage credits · /passes
+
+❯ Use the AskUserQuestion tool now to
+  ask exactly one single-choice
+  question: 'Which colour?' with
+  options Red and Blue. Do nothing
+  else.
+────────────────────────────────────────
+ ☐ Colour
+
+Which colour?
+
+❯ 1. Red
+     Red
+  2. Blue
+     Blue
+  3. Type something.
+────────────────────────────────────────
+  4. Chat about this
+
+Enter to select · ↑/↓ to navigate · Esc
+to cancel

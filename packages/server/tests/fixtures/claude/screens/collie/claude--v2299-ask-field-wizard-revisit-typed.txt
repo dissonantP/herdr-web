@@ -1,0 +1,30 @@
+
+
+❯ Testing a UI. Call the AskUserQuestion tool exactly once with ONE question: question 'Which color do you prefer?', header 'Color', options Red (desc 'A
+  warm color'), Green (desc 'A calm color'), Blue (desc 'A cool color'). multiSelect false. After I answer, reply with only the exact tool result text
+  verbatim, then stop.
+
+● User answered Claude's questions:
+  ⎿  · Which color do you prefer? → Teal, like the sea
+
+● The user answered: "Which color do you prefer?"="Teal, like the sea"
+
+✻ Brewed for 11s · done 1:48 AM
+
+❯ Now call AskUserQuestion exactly once with THREE questions (multiSelect false on all): Q1 'Which fruit?' header 'Fruit' options Apple, Pear; Q2 'Which
+  drink?' header 'Drink' options Tea, Coffee; Q3 'Which city?' header 'City' options Paris, Rome. After I answer, reply with only the exact tool result
+  text verbatim, then stop.
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+←  ☒ Fruit  ☒ Drink  ☒ City  ✔ Submit  →
+
+Which fruit?
+
+❯ 1. Apple
+     A crisp fruit
+  2. Pear
+     A soft, sweet fruit
+  3. Mango ✔
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  4. Chat about this
+
+Enter to select · Tab/Arrow keys to navigate · Esc to cancel

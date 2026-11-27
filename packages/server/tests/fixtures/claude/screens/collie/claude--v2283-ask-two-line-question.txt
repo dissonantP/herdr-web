@@ -1,0 +1,26 @@
+
+ ▐▛███▛█   Claude Code v2.1.283
+▝▜██████▀  Opus 5.5 with high effort · Claude Max
+ ▝▝   ▝▝   /tmp/collie-dialog-debug
+
+
+❯ Use the AskUserQuestion tool right now with ONE question. Make the question text span two lines with a real line
+  break in it: first line "Which fruit do you want?" and second line "Pick the one you like best.". Give 3 options,
+  each with a description that contains a line break too. Do nothing else.
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ ☐ Fruit
+
+│ Which fruit do you want?
+│ Pick the one you like best.
+
+❯ 1. Apple
+     A crisp, sweet fruit.�It is good for snacks.
+  2. Banana
+     A soft, yellow fruit.�It is easy to peel.
+  3. Orange
+     A juicy citrus fruit.�It has a lot of vitamin C.
+  4. Type something.
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  5. Chat about this
+
+Enter to select · ↑/↓ to navigate · Esc to cancel

@@ -1,0 +1,39 @@
+● I'm up and own AutoDev now: the skill, autodev.py,
+  the agent roles, and how Assistants and builders
+  work. I won't start anything until you say.
+
+  Next: none for now, just tell me what you want to
+  work on.
+
+✻ Sautéed for 18s · done 2:03
+
+❯ I would love to review our agent definitions and add
+  more. Im enjoying autodev.
+
+  Ran 1 shell command
+
+● Four reviewers exist now (reviewer, qa, designer,
+  editor), with qa the strongest and designer limited
+  to creative sites. I'm proposing security, a11y,
+  perf, triage and researcher as additions, with
+  security running on Fable. · summary
+
+● Setting pane status to waiting
+  ⎿  $ [ -n "$HC_TERMINAL_ID" ] && hc label
+     "$HC_TERMINAL_ID" "status=Waiting: which agents to
+     add?" "status.color=yellow" >/dev/null; true
+
+───────────────────────────────────────────────────────
+←  ☒ New agents  ✔ Submit  →
+
+Review your answers
+
+ ● Which new AutoDev agent roles do you want me to
+   draft first?
+   → security
+
+Ready to submit your answers?
+
+❯ 1. Submit answers
+  2. Cancel
+───────────────────────────────────────────── autodev ─

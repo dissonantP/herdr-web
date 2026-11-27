@@ -1,0 +1,42 @@
+ ▐▛███▛█   Claude Code v2.1.296
+▝▜██████▀  Sonnet 5.5 · Claude Max
+ ▝▝   ▝▝   /tmp/nr-lab/project
+
+
+❯ Use the AskUserQuestion tool exactly once to ask me one question: "Pick a
+  colour?" with the options Red and Blue (no multiSelect). Do nothing else.
+
+● User declined to answer questions
+  ⎿  · Pick a colour? (Red / Blue)
+
+✻ Cogitated for 2s · done 8:15 PM
+
+❯ Use the AskUserQuestion tool exactly once with TWO questions: "Pick a colour?"
+  (Red, Blue) and "Pick a size?" (Small, Large). Neither is multiSelect. Do
+  nothing else.
+
+● User declined to answer questions
+  ⎿  · Pick a colour? (Red / Blue)
+     · Pick a size? (Small / Large)
+
+✻ Cooked for 1s · done 8:16 PM
+
+❯ Use the AskUserQuestion tool exactly once with ONE question "Pick toppings?"
+  with options Cheese, Ham, Olives and multiSelect true. Do nothing else.
+──────────────────────────────────────────────────────────────────────────────────
+←  ☐ Toppings  ✔ Submit  →
+
+Pick toppings?
+
+❯ 1. [ ] Cheese
+         Cheese
+  2. [ ] Ham
+         Ham
+  3. [ ] Olives
+         Olives
+  4. [ ] Type something
+     Submit
+──────────────────────────────────────────────────────────────────────────────────
+  5. Chat about this
+
+Enter to select · ↑/↓ to navigate · Esc to cancel

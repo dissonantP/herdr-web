@@ -1,0 +1,10 @@
+ ▐▛███▛█   Claude Code v2.1.291
+▝▜██████▀  Sonnet 5.5 · Claude Max
+ ▝▝   ▝▝   /tmp/claude-lab/project
+
+
+─────────────────────────────────────────────────────────────────────────────────
+❯ Try "how does <filepath> work?"
+─────────────────────────────────────────────────────────────────────────────────
+  sonnet · lab-project · main · ctx 12%                      ◐ medium · /effort
+  ⏸ manual mode on · ← for agents

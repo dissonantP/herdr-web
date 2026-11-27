@@ -1,0 +1,49 @@
+
+╭─── Claude Code v2.1.210 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                    │ Tips for getting started                                                                                             │
+│                 Welcome back Altan!                │ Run /init to create a CLAUDE.md file with instructions for Claude                                                    │
+│                                                    │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │
+│                       ▐▛███▜▌                      │ What's new                                                                                                           │
+│                      ▝▜█████▛▘                     │ Added a live elapsed-time counter to the collapsed tool summary line so long-running tool calls visibly tick instea… │
+│                        ▘▘ ▝▝                       │ Added a startup warning for `Write(path)`, `NotebookEdit(path)`, and `Glob(path)` permission rules — use `Edit(path… │
+│      Fable 5 with xhigh effort · Claude Max ·      │ Fixed `isolation: 'worktree'` subagents being able to run git-mutating commands against the main repo checkout inst… │
+│      altan@sportsight.de's Organization            │ /release-notes for more                                                                                              │
+│        ~/playground/collie-demo-herd/juniper       │                                                                                                                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+❯ Create a file named SHEPHERD.md with a one-line description of a shepherd dog.
+
+● Write(SHEPHERD.md)
+  ⎿  Error writing file
+
+  Read 1 file
+
+● User answered Claude's questions:
+  ⎿  · SHEPHERD.md already exists and contains a haiku about agents. How should I handle it? → Leave it alone
+
+● Understood — I've left SHEPHERD.md untouched. It still contains the original haiku, and no changes were made.
+
+✻ Brewed for 43s
+
+❯ Use AskUserQuestion with multiSelect enabled: ask me which pizza toppings I want, options Cheese, Mushrooms, Olives, Peppers, allowing multiple selections. Do nothing
+  else.
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+←  ☐ Toppings  ✔ Submit  →
+
+Which pizza toppings do you want?
+
+❯ 1. [ ] Cheese
+  Classic melted cheese topping.
+  2. [ ] Mushrooms
+  Sliced mushrooms.
+  3. [ ] Olives
+  Sliced olives.
+  4. [ ] Peppers
+  Sliced peppers.
+  5. [ ] Type something
+     Submit
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  6. Chat about this
+
+Enter to select · ↑/↓ to navigate · Esc to cancel

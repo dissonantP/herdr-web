@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>herdr-web: a browser client for herdr-core</title>
+<meta name="description" content="A browser client for herdr-core: your Herdr spaces, Claude Code as a chat, and terminals.">
+<meta property="og:title" content="herdr-web">
+<meta property="og:description" content="A browser client for herdr-core.">
+<meta property="og:image" content="screenshots/desktop-chat.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@75..112.5,100..800&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <a class="tab-name" href="./">herdr-web</a>
+  <nav>
+    <a href="#features">features</a>
+    <a href="#security">security</a>
+    <a href="#install">install</a>
+    <a href="https://github.com/dissonantP/herdr-web">github ↗</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero grid">
+    <div class="hero-copy">
+      <h1>herdr-web<span class="cursor" aria-hidden="true"></span></h1>
+      <p class="sub">A browser client for <a href="https://herdr.dev">herdr-core</a>, on phone and desktop.</p>
+      <p class="lede">Built for Claude Code sessions running under herdr-core: your Herdr spaces, each session as a chat, and terminals. Runs next to herdr-core; reach it over your tailnet.</p>
+      <div class="cmd" data-copy="git clone https://github.com/dissonantP/herdr-web.git &amp;&amp; cd herdr-web &amp;&amp; ./install.sh apply">
+        <pre><code><span class="ps">$</span> git clone https://github.com/dissonantP/herdr-web.git &amp;&amp; cd herdr-web &amp;&amp; ./install.sh apply</code></pre>
+        <button type="button" class="copy">copy</button>
+      </div>
+    </div>
+    <img class="shot-desk" src="screenshots/desktop-chat.png" alt="herdr-web on a desktop: the tree of spaces beside a Claude chat with a permission prompt" width="1280" height="800">
+    <img class="shot-phone" src="screenshots/phone-chat.png" alt="A Claude chat on a phone, its permission prompt as buttons" width="360" height="760">
+  </section>
+
+  <section id="features" class="features">
+    <div class="row grid">
+      <h2><span class="hash">##</span> chat</h2>
+      <ul>
+        <li>Live chat view of any session: markdown, folded tool calls and thinking, edits as diffs</li>
+        <li>Permission prompts, questions and plan approvals as buttons, plus a free-text answer</li>
+        <li>Reply, stop, attach files and photos, slash commands with autocomplete</li>
+        <li>New sessions with model, effort and permission mode; resume past ones</li>
+      </ul>
+    </div>
+    <div class="row grid">
+      <h2><span class="hash">##</span> spaces</h2>
+      <ul>
+        <li>One tree of groups, nested spaces, tabs and panes, with status that bubbles up</li>
+        <li>Create, rename, move, colour and delete at every level</li>
+        <li>Search, Ctrl+P launcher, pins</li>
+        <li>Same spaces and tabs as Herdr Desktop, live</li>
+      </ul>
+      <figure><img src="screenshots/phone-tree.png" alt="The tree on a phone: groups, nested spaces, tabs and statuses" width="360" height="760" loading="lazy"></figure>
+    </div>
+    <div class="row grid">
+      <h2><span class="hash">##</span> terminals</h2>
+      <ul>
+        <li>Real terminal (ghostty-web) in any tab, with an Esc/Tab/Ctrl/arrows bar on phones</li>
+      </ul>
+      <figure><img src="screenshots/phone-terminal.png" alt="A terminal tab with the phone keys bar" width="360" height="760" loading="lazy"></figure>
+    </div>
+    <div class="row grid">
+      <h2><span class="hash">##</span> notifications</h2>
+      <ul>
+        <li>Push when an agent needs input, finishes or dies; agents can also push with a <code>herdr.notify</code> label</li>
+        <li>“Needs you” inbox, waiting sessions first</li>
+        <li>Mute or quiet a space, or pause everything</li>
+      </ul>
+      <figure><img src="screenshots/phone-inbox.png" alt="The inbox: waiting, then working, then idle" width="360" height="760" loading="lazy"><figcaption><span class="dot"></span>waiting first</figcaption></figure>
+    </div>
+    <div class="row grid">
+      <h2><span class="hash">##</span> sleep</h2>
+      <ul>
+        <li>Sleep idle sessions to free memory, by hand or after a set idle time; resume in the same pane. Working or waiting sessions are never slept.</li>
+      </ul>
+      <figure><img src="screenshots/phone-settings.png" alt="Settings: auto-sleep, the inbox view, notifications" width="360" height="760" loading="lazy"></figure>
+    </div>
+    <div class="row grid">
+      <h2><span class="hash">##</span> app</h2>
+      <ul>
+        <li>Installable PWA with its own login; settings shared across devices</li>
+      </ul>
+    </div>
+    <div id="limits" class="row grid">
+      <h2><span class="hash">##</span> limits</h2>
+      <ul>
+        <li>Chat, prompts as buttons, session status, automatic push and sleep/resume need Claude Code. The tree,
+          terminals and <code>herdr.notify</code> pushes work with any program; other agents can be added as an agent adapter.</li>
+        <li>Linux with systemd only. It must run on the same machine as herdr-core.</li>
+        <li>Not built for the public internet; see <a href="#security">security</a>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="security" class="security">
+    <div class="grid">
+      <h2><span class="bang">!</span> It is effectively root access to your machine.</h2>
+      <p class="why">It starts programs and types into terminals as your user. Anyone who gets past its login can run any
+        command on that machine.</p>
+      <dl>
+        <dt>127.0.0.1 only</dt>
+        <dd><b>Tailnet only.</b> It listens on <code>127.0.0.1</code>; expose it with <code>tailscale serve</code>.
+          Never <code>0.0.0.0</code>, a port forward or Funnel.</dd>
+        <dt>2fa in front</dt>
+        <dd><b>Add a 2FA gate</b> such as Authelia in front if you can. The app's argon2id login is the second
+          layer, not the only one.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="install" class="install grid">
+    <h2><span class="hash">##</span> install</h2>
+    <div class="install-cmd">
+      <p class="needs">Needs Linux with systemd, Node 24.7+, <a href="https://herdr.dev">herdr-core</a> and Claude Code.</p>
+<pre><code>git clone https://github.com/dissonantP/herdr-web.git
+cd herdr-web
+<span># build, login, push keys, the Claude hook, the service</span>
+./install.sh apply
+<span># HTTPS on your tailnet only</span>
+tailscale serve --bg 7317</code></pre>
+    </div>
+    <p class="touches">The installer adds one SessionStart hook to <code>~/.claude/settings.json</code> (it labels each pane with its
+      session id and never blocks Claude). Everything else stays in herdr's own folders
+      (<code>~/.config/herdr</code>, <code>~/.local/state/herdr</code>) and one systemd user unit.</p>
+    <p class="readme"><a href="https://github.com/dissonantP/herdr-web#install">README ↗</a></p>
+  </section>
+</main>
+
+<footer class="grid">
+  <p>Terminal stack from <a href="https://github.com/kcosr/herdr-web">kcosr/herdr-web</a>; herdr-core
+    client and Claude parsers from <a href="https://github.com/AltanS/collie">AltanS/collie</a>. Both MIT.
+    Screenshots show a made-up demo.</p>
+</footer>
+
+<script>
+  // The copy control on the install command, and the nav tab of the section in view.
+  for (const box of document.querySelectorAll(".cmd")) {
+    const button = box.querySelector(".copy");
+    button.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(box.dataset.copy);
+        button.textContent = "copied";
+      } catch {
+        button.textContent = "select it";
+      }
+      setTimeout(() => { button.textContent = "copy"; }, 1500);
+    });
+  }
+  const links = new Map([...document.querySelectorAll('.bar nav a[href^="#"]')].map((a) => [a.getAttribute("href").slice(1), a]));
+  const seen = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) for (const [id, a] of links) a.classList.toggle("on", id === e.target.id);
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  for (const id of links.keys()) { const el = document.getElementById(id); if (el) seen.observe(el); }
+</script>
+</body>
+</html>

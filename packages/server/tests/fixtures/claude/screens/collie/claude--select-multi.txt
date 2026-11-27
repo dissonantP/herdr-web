@@ -1,0 +1,34 @@
+ ⚠ 1 MCP server needs authentication · run /mcp
+
+ ▎ Fable 5 is back.
+ ▎ Until July 7, you can use up to 50% of your plan's weekly usage limit on Fable 5. If you hit your limit, you can continue
+ ▎ on Fable 5 with usage credits. Fable 5 draws down usage faster than Opus 4.8. Learn more
+ ▎ (https://support.claude.com/en/articles/15424964-claude-fable-5-promotional-access)
+
+❯ ask me a question with prompt options
+
+● User answered Claude's questions:
+  ⎿  · You're on the feature/block-renderer branch with the status strip + submission progress bar just committed. What would
+     you like to do next? → Keep building
+
+● You picked Keep building. What's the next block-renderer feature or hardening task you want to tackle?
+
+✻ Baked for 13s
+
+❯ ok, awesome! now ask me a question with multiple steps please
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+←  ☒ Focus area  ☐ Scope  ☐ Workflow  ✔ Submit  →
+
+How should I approach the work?
+
+❯ 1. Plan first
+     I draft a plan and get your approval before writing any code.
+  2. Just build it
+     I go straight to implementation and show you the diff when done.
+  3. Build + verify
+     I implement, then build and drive the app end-to-end to confirm it works before handing back.
+  4. Type something.
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  5. Chat about this
+
+Enter to select · Tab/Arrow keys to navigate · Esc to cancel

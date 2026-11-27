@@ -1,0 +1,30 @@
+
+❯ Call AskUserQuestion once more with ONE question: 'Which tree?' header 'Tree' options Oak, Pine. multiSelect false. Then reply with only the exact tool
+  result verbatim.3
+
+● User declined to answer questions
+  ⎿  · Which tree? (Oak / Pine)
+
+✻ Worked for 2s · done 1:54 AM
+
+❯ one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty one two three four
+  five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty one two three four five six seven eight
+  nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twentyCall AskUserQuestion once with ONE question, multiSelect
+  TRUE: 'Which toppings?' header 'Toppings' options Cheese, Olives, Basil. Then reply with only the exact tool result verbatim.
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+←  ☒ Toppings  ✔ Submit  →
+
+Which toppings?
+
+  1. [✔] Cheese
+         Melted cheese
+  2. [ ] Olives
+         Sliced olives
+  3. [ ] Basil
+         Fresh basil leaves
+❯ 4. [✔] Pineapple
+     Submit
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  5. Chat about this
+
+Enter to select · ↑/↓ to navigate · ctrl+g to edit in Notepad · Esc to cancel

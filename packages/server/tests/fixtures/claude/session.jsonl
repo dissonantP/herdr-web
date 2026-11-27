@@ -1,0 +1,17 @@
+{"type":"mode","mode":"default"}
+{"type":"user","uuid":"u1","timestamp":"2026-11-14T07:00:00.000Z","isSidechain":false,"message":{"role":"user","content":"Fix the **greeting** in hello.txt"}}
+{"type":"assistant","uuid":"a1","timestamp":"2026-11-14T07:00:01.000Z","message":{"id":"msg_1","role":"assistant","content":[{"type":"thinking","thinking":"The user wants hello.txt changed.","signature":"x"}]}}
+{"type":"assistant","uuid":"a2","timestamp":"2026-11-14T07:00:02.000Z","message":{"id":"msg_1","role":"assistant","content":[{"type":"text","text":"I'll read the file first.\n\n- step one\n- step two"}]}}
+{"type":"assistant","uuid":"a3","timestamp":"2026-11-14T07:00:03.000Z","message":{"id":"msg_1","role":"assistant","content":[{"type":"tool_use","id":"toolu_read","name":"Read","input":{"file_path":"/work/hello.txt"}}]}}
+{"type":"user","uuid":"u2","timestamp":"2026-11-14T07:00:04.000Z","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"toolu_read","content":"hello wrold\n"}]},"toolUseResult":{"type":"text"}}
+{"type":"assistant","uuid":"a4","timestamp":"2026-11-14T07:00:05.000Z","message":{"id":"msg_2","role":"assistant","content":[{"type":"tool_use","id":"toolu_edit","name":"Edit","input":{"file_path":"/work/hello.txt","old_string":"wrold","new_string":"world"}}]}}
+{"type":"user","uuid":"u3","timestamp":"2026-11-14T07:00:06.000Z","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"toolu_edit","content":"The file /work/hello.txt has been updated."}]},"toolUseResult":{"filePath":"/work/hello.txt","structuredPatch":[{"oldStart":1,"oldLines":1,"newStart":1,"newLines":1,"lines":["-hello wrold","+hello world"]}],"originalFile":"hello wrold\n"}}
+{"type":"assistant","uuid":"a5","timestamp":"2026-11-14T07:00:07.000Z","message":{"id":"msg_3","role":"assistant","content":[{"type":"tool_use","id":"toolu_task","name":"Task","input":{"description":"Check spelling elsewhere","prompt":"grep for wrold"}}]}}
+{"type":"assistant","uuid":"s1","isSidechain":true,"timestamp":"2026-11-14T07:00:08.000Z","message":{"id":"msg_side","role":"assistant","content":[{"type":"text","text":"subagent internal chatter"}]}}
+{"type":"user","uuid":"u4","timestamp":"2026-11-14T07:00:09.000Z","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"toolu_task","content":[{"type":"text","text":"No other typos."}]}]}}
+{"type":"user","uuid":"u5","timestamp":"2026-11-14T07:00:10.000Z","isMeta":true,"message":{"role":"user","content":"<system-reminder>hidden</system-reminder>"}}
+{"type":"user","uuid":"u6","timestamp":"2026-11-14T07:00:11.000Z","message":{"role":"user","content":"<command-name>/compact</command-name><command-args></command-args>"}}
+{"type":"user","uuid":"u7","timestamp":"2026-11-14T07:00:12.000Z","message":{"role":"user","content":"<local-command-stdout>Compacted</local-command-stdout>"}}
+{"type":"assistant","uuid":"a6","timestamp":"2026-11-14T07:00:13.000Z","message":{"id":"msg_4","role":"assistant","content":[{"type":"tool_use","id":"toolu_bash","name":"Bash","input":{"command":"false"}}]}}
+{"type":"user","uuid":"u8","timestamp":"2026-11-14T07:00:14.000Z","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"toolu_bash","is_error":true,"content":"Exit code 1"}]}}
+{"type":"assistant","uuid":"a7","timestamp":"2026-11-14T07:00:15.000Z","message":{"id":"msg_5","role":"assistant","content":[{"type":"text","text":"Done: **fixed** the typo."}]}}

@@ -1,0 +1,32 @@
+#!/bin/sh
+# A stand-in for Claude Code in the isolated core's tests (F14, F15, F50, task 067). Its name is
+# `claude` because herdr and external hc-sleep scripts recognise Claude by the foreground process's name.
+# - Logs where it started and its arguments (one line each) to $CLAUDE_CONFIG_DIR/fake-claude-args.log
+#   (the new-Claude form's tests read it; HERDR_CLAUDE_COMMAND in global-setup).
+# - Writes $CLAUDE_CONFIG_DIR/sessions/<pid>.json as Claude does, which sleep reads: the session is
+#   `--resume`/`-r`'s, else $FAKE_CLAUDE_SESSION, else a fixed id.
+# - Draws $FAKE_SCREEN (a fixture screen, e.g. a menu waiting on an answer) when set.
+# - Reports itself as Claude Code (OSC 7501) in $FAKE_CLAUDE_STATE (idle, working or blocked; default
+#   idle) and waits.
+dir=${CLAUDE_CONFIG_DIR:-/tmp}
+printf '%s|%s\n' "$PWD" "$*" >> "$dir/fake-claude-args.log"
+session=${FAKE_CLAUDE_SESSION:-11111111-1111-4111-8111-111111111111}
+while [ $# -gt 0 ]; do
+  case $1 in -r|--resume) session=$2; shift ;; esac
+  shift
+done
+mkdir -p "$dir/sessions"
+printf '{"sessionId":"%s","cwd":"%s"}' "$session" "$PWD" > "$dir/sessions/$$.json"
+state=${FAKE_CLAUDE_STATE:-idle}
+kind=
+[ "$state" = blocked ] && kind=:kind=permission
+[ -n "$FAKE_SCREEN" ] && [ -z "$FAKE_INPUT_LOG" ] && { printf '\033[2J\033[H'; cat "$FAKE_SCREEN"; }
+printf '\033]7501;state=%s:app=claude-code%s\007' "$state" "$kind"
+# $FAKE_INPUT_LOG: also read the terminal like a Claude prompt, logging every byte (tests/support/fake-claude.py), screen $FAKE_SCREEN.
+if [ -n "$FAKE_INPUT_LOG" ] && [ -n "$FAKE_SCREEN" ]; then
+  python3 "$(dirname "$0")/../fake-claude.py" "$state" "$FAKE_INPUT_LOG" "$FAKE_SCREEN"
+  exit 0
+fi
+sleep 3600 &
+trap 'kill $! 2>/dev/null; exit 143' TERM
+wait

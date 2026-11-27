@@ -1,0 +1,17 @@
+│ SimpleFIN is connected and sees SF Fire CU and Schwab. Which accounts should
+│ feed spending into the budget queue? (Schwab left out as investments.)
+
+❯ 1. [ ] Checking accounts
+         Checking NEW (3001), Checking (3002), Checking OLD (0010).
+  2. [ ] Visa Platinum (0092)
+         The credit union credit card.
+  3. [ ] Biz (3000)
+         The business account.
+↓ 4. [ ] Ins/tax + mortgage
+         Ins & Prop. Tax (2100) and Mortgage and Monthly (2101).
+     Submit
+─────────────────────────────────────────────────────────────────────────────────
+  6. Chat about this
+
+Enter to select · ↑/↓ to navigate · Esc to cancel
+───────────────────────────────────────────────────────────────────── budgeting ─

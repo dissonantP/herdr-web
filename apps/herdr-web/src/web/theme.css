@@ -1,0 +1,126 @@
+/* The one theme file: every colour, size and spacing the UI uses is a token here (SPEC F6).
+   Components use only these variables, so swapping this file swaps the look. */
+:root {
+  color-scheme: dark;
+
+  --bg: #111214;
+  --surface: #17191c;
+  --raised: #1f2226;
+  --hover: #262a2f;
+  --selected: #2c3a4a;
+  --border: #2a2d32;
+  --text: #d9dadc;
+  --text-dim: #8b9097;
+  --accent: #6ea8fe;
+  --row-inv-fg: #000000;
+  --row-inv-hover: rgba(0, 0, 0, 0.12);
+  --row-mark: 3px;
+  --danger: #f38ba8;
+  --diff-add: #1f3a2b;
+  --diff-del: #43232b;
+  --diff-add-fg: #a6e3a1;
+  --diff-del-fg: #f38ba8;
+  --chat-max-w: none;
+  --chat-gutter: var(--space-5);
+  --composer-max-h: 40vh;
+  --composer-min-h: 52px;
+  --thumb: 72px;
+  --sent-img-h: 160px;
+  --sent-img-w: 260px;
+  --remove-offset: -8px;
+  --remove-dot: 22px;
+  --thumb-scrim: #000000b3;
+  --on-scrim: #ffffff;
+  --composer-shadow: 0 -8px 16px rgba(0, 0, 0, 0.35);
+  --slash-max-h: 40vh;
+  --menu-detail-max-h: 25vh;
+  --chat-input-max-h: 80%;
+  --working-dot: 6px;
+  --working-beat: 1.2s;
+  --launcher-top: 12vh;
+  --launcher-w: 560px;
+  --launcher-max-h: 70vh;
+  --banner-w: 420px;
+  --banner-z: 30;
+  --reply-last-max-h: min(55vh, 420px);
+  --scrim: rgba(0, 0, 0, 0.55);
+
+  --status-working: #6ea8fe;
+  --status-waiting: #f0b54a;
+  --status-idle: #5c6168;
+  --status-finished: #6fcf97;
+  --status-asleep: #7c6fb0;
+  --badge-bg: var(--status-waiting);
+  --badge-fg: #111214;
+  --keys-h: 40px;
+  --badge-size: 18px;
+  --hairline: 1px;
+  --status-dot: 8px;
+  --tracking: 0.04em;
+
+  /* Terminal colours (read by the ghostty renderer through terminal/terminalTheme.ts). */
+  --loupe-outline: rgba(17, 18, 20, 0.85);
+  --term-bg: #111214;
+  --term-fg: #d9dadc;
+  --term-cursor: #f5e0dc;
+  --term-selection: #3b4350;
+  --term-black: #45475a;
+  --term-red: #f38ba8;
+  --term-green: #a6e3a1;
+  --term-yellow: #f9e2af;
+  --term-blue: #89b4fa;
+  --term-magenta: #f5c2e7;
+  --term-cyan: #94e2d5;
+  --term-white: #bac2de;
+  --term-bright-black: #585b70;
+  --term-bright-white: #a6adc8;
+
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+  --text-sm: 12px;
+  --text-md: 14px;
+  --text-lg: 16px;
+
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 8px;
+  --space-4: 12px;
+  --space-5: 16px;
+  --space-6: 28px;
+  --indent: 14px;
+
+  --row-h: 32px;
+  --bar-h: 44px;
+  --pinbar-h: 40px;
+  --usage-h: 26px;
+  --usage-h-touch: 40px;
+  --usage-pop-w: 280px;
+  --radius: 4px;
+  --radius-lg: 12px;
+  --sidebar-w: 300px; /* default; sidebar-width.ts SIDEBAR_DEFAULT */
+  --sidebar-handle-w: 7px;
+  --graph-panel-w: 480px;
+  --graph-pad-y: 5px; /* node padding top and bottom (graph-layout.ts PAD_Y) */
+  --graph-node-bg: var(--raised);
+  --graph-drop: var(--accent);
+  /* Graph node line heights; graph-layout.ts sizes nodes from the same numbers. */
+  --graph-line-title: 18px;
+  --graph-line-session: 16px;
+  --graph-line-status: 14px;
+  --graph-line-group: 18px;
+  --sheet-w: 420px;
+  --tap-h: 44px;
+  --sheet-max-h: 85vh;
+  --disabled-opacity: 0.6;
+  --ctx-min-w: 12rem;
+  --ctx-max-w: 20rem;
+  --ctx-edge: 8px;
+  --ctx-shadow: 0 var(--space-3) var(--space-5) var(--scrim);
+}
+
+/* Chat text zoom (task 071): the chat list rescales the text tokens by --chat-zoom (set by ChatView). Keep the px values in step with --text-sm/md/lg above. */
+.chat-list {
+  --text-sm: calc(12px * var(--chat-zoom, 1));
+  --text-md: calc(14px * var(--chat-zoom, 1));
+  --text-lg: calc(16px * var(--chat-zoom, 1));
+}

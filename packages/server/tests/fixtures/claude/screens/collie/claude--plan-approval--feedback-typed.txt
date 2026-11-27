@@ -1,0 +1,46 @@
+       if (user.email.includes("@")) {
+         return true;
+       }
+     }
+   }
+   return false;
+ }
+
+ module.exports = { validate };
+
+ Approach
+
+ Replace the nested if chain with early returns (guard clauses), flattening the function to a single level:
+
+ function validate(user) {
+   if (!user) return false;
+   if (!user.email) return false;
+   return user.email.includes("@");
+ }
+
+ module.exports = { validate };
+
+ This preserves the exact same behavior (returns true only when user and user.email are truthy and user.email contains "@", false
+ otherwise) while removing all nesting.
+
+ File to modify
+
+ - /tmp/collie-probe/validate.js
+
+ Verification
+
+ - Run node -e 'const {validate}=require("./validate.js"); console.log(validate(undefined), validate({}), validate({email:"a"}),
+ validate({email:"a@b.com"}))' from /tmp/collie-probe and confirm output is false false false true, matching the original
+ implementation's behavior.
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Claude has written up a plan and is ready to execute. Would you like to proceed?
+
+   1. Yes, clear context (4% used) and use auto mode
+   2. Yes, and use auto mode
+ ❯ 3. Yes, manually approve edits
+   4. use a guard clause instead
+      shift+tab to approve with this feedback
+
+ ctrl+g to edit in Vim · ~/.claude/plans/refactor-validate-in-validate-js-snazzy-pelican.md

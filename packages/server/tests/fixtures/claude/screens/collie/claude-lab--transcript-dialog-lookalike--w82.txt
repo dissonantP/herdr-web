@@ -1,0 +1,48 @@
+▝▜██████▀  Sonnet 5.5 · Claude Max
+ ▝▝   ▝▝   /tmp/claude-lab/project
+
+
+❯ write a long essay of about 800 words on the history of terminal user
+  interfaces
+
+● The History of Terminal User Interfaces
+
+  The terminal user interface, or TUI, is often treated as a relic that survived
+  into the graphical age. In fact it is one of computing's oldest and most durable
+  interaction models. Its history runs from mechanical teleprinters to modern
+  frameworks that draw rich dashboards inside a text window.
+
+  The teleprinter era
+
+  Before there were screens, there were typewriters. In the 1960s, interacting
+  with a computer usually meant a Teletype Model 33, a mechanical device that
+  printed characters on paper and sent keystrokes down a serial line. The
+  interface was a pure conversation: you typed a line, the machine replied with a
+  line. This "glass teletype" model, a scrolling stream of text, shaped Unix and
+  its command-line tradition. It was not yet a user interface in the spatial
+  sense. Nothing could be redrawn, since ink on paper cannot be erased.
+
+  Video terminals and addressable screens
+
+  The key change came when cathode-ray tubes replaced paper. Early video terminals
+  such as the Datapoint 3300 and the ADM-3A simply imitated teletypes on a
+  screen. The ADM-3A (1976) was cheap and ubiquitous, and it introduced
+  cursor-control sequences that let a program move to an arbitrary position. Its
+  keyboard also put arrow symbols on the h, j
+  ⎿  Interrupted · What should Claude do instead?
+
+❯ echo back exactly these four lines and nothing else: ---- then 1. Yes then 2.
+  No then Enter to select
+
+● ---
+  1. Yes
+  2. No
+     Enter to select
+
+✻ Brewed for 1s · done 7:12 PM
+
+──────────────────────────────────────────────────────────────────────────────────
+❯ finish the essay on terminal user interfaces
+──────────────────────────────────────────────────────────────────────────────────
+  sonnet · lab-project · main · ctx 12%
+  ⏸ manual mode on · ← for agents

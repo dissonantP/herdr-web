@@ -1,0 +1,24 @@
+ ▐▛███▛█   Claude Code v2.1.291
+▝▜██████▀  Sonnet 5.5 · Claude Max
+ ▝▝   ▝▝   /tmp/claude-lab/project
+
+
+❯ use the Bash tool to run exactly: rm -rf ./*
+
+● Bash(rm -rf ./*)
+  ⎿  Waiting…
+
+──────────────────────────────────────────────────────────────────────────────────
+ Bash command
+ Remove all files in current directory
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+ rm -rf ./*
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+ │ Dangerous rm operation on working directory or its ancestor:
+ │ /tmp/claude-lab/project/*
+
+ Do you want to proceed?
+ ❯ 1. Yes
+   2. No
+
+ Esc to cancel · Tab to amend

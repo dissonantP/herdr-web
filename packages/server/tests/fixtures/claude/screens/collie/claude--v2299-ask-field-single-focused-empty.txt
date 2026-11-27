@@ -1,0 +1,25 @@
+
+ ▐▛███▛█   Claude Code v2.1.299
+▝▜██████▀  Haiku 5.5 · Claude Max
+ ▝▝   ▝▝   ~\sandbox
+
+
+❯ Testing a UI. Call the AskUserQuestion tool exactly once with ONE question: question 'Which color do you prefer?', header 'Color', options Red (desc 'A
+  warm color'), Green (desc 'A calm color'), Blue (desc 'A cool color'). multiSelect false. After I answer, reply with only the exact tool result text
+  verbatim, then stop.
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ ☐ Color
+
+Which color do you prefer?
+
+  1. Red
+     A warm color
+  2. Green
+     A calm color
+  3. Blue
+     A cool color
+❯ 4. Type something.
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  5. Chat about this
+
+Enter to select · ↑/↓ to navigate · ctrl+g to edit in Notepad · Esc to cancel

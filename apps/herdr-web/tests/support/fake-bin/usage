@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# A stand-in for `claude -p /usage` (HERDR_USAGE_COMMAND in global-setup): prints the real format and
+# appends a line to $HERDR_USAGE_COUNT_FILE per run, so a test can count how often the backend asks.
+echo x >> "${HERDR_USAGE_COUNT_FILE:?}"
+cat <<'OUT'
+You are currently using your subscription to power your Claude Code usage
+
+Current session: 10% used · resets Nov 17, 11am (America/Los_Angeles)
+Current week (all models): 2% used · resets Nov 24, 1am (America/Los_Angeles)
+Current week (Fable): 0% used · resets Nov 24, 1am (America/Los_Angeles)
+
+What's contributing to your usage?
+OUT

@@ -1,0 +1,18 @@
+ ▐▛███▛█   Claude Code v2.1.291
+▝▜██████▀  Sonnet 5.5 · Claude Max
+ ▝▝   ▝▝   /tmp/claude-lab/project
+
+
+❯ read README.md and reply with one short sentence
+
+  Read 1 file (ctrl+o to expand)
+
+● The README says this is a throwaway lab project used for screen captures.
+
+✻ Crunched for 2s · done 7:10 PM
+
+──────────────────────────────────────────────────────────────────────────────────
+❯ Nothing obvious follows from a one-off README read, so I'm suggesting nothing.
+──────────────────────────────────────────────────────────────────────────────────
+  sonnet · lab-project · main · ctx 12%
+  ⏸ manual mode on · ← for agents

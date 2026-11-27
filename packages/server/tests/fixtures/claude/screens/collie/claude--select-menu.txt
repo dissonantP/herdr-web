@@ -1,0 +1,34 @@
+
+╭─── Claude Code v2.1.201 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                    │ Tips for getting started                                                                                                                                     │
+│                 Welcome back Altan!                │ Ask Claude to create a new app or clone a repository                                                                                                         │
+│                                                    │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │
+│                       ▐▛███▜▌                      │ What's new                                                                                                                                                   │
+│                      ▝▜█████▛▘                     │ Claude Sonnet 5 sessions no longer use the mid-conversation system role for harness reminders                                                                │
+│                        ▘▘ ▝▝                       │ Changed `AskUserQuestion` dialogs to no longer auto-continue by default; opt into an idle timeout via `/config`                                              │
+│     Opus 4.8 with xhigh effort · Claude Max ·      │ Changed the "default" permission mode to "Manual" across the CLI, `--help`, VS Code, and JetBrains; `--permission-mode manual` and `"defaultMode": "manual"… │
+│     sandboxdev@example.com's Organization          │ /release-notes for more                                                                                                                                      │
+│           /…/scratchpad/fixture-sandbox            │                                                                                                                                                              │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+ ▎ Fable 5 is back.
+ ▎ Until July 7, you can use up to 50% of your plan's weekly usage limit on Fable 5. If you hit your limit, you can continue on Fable 5 with usage credits. Fable 5 draws down usage faster than Opus 4.8. Learn more
+ ▎ (https://support.claude.com/en/articles/15424964-claude-fable-5-promotional-access)
+
+❯ Use the AskUserQuestion tool to ask me one question: which color theme should the dashboard use? Offer exactly three options: Red, Green, Blue.
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ ☐ Color Theme
+
+Which color theme should the dashboard use?
+
+❯ 1. Red
+     A warm, high-energy theme with red as the primary accent color.
+  2. Green
+     A calm, natural theme with green as the primary accent color.
+  3. Blue
+     A cool, professional theme with blue as the primary accent color.
+  4. Type something.
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  5. Chat about this
+
+Enter to select · ↑/↓ to navigate · Esc to cancel

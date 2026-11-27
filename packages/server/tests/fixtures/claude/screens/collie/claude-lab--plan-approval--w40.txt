@@ -1,0 +1,48 @@
+
+● Updated plan
+  ⎿  /plan to preview
+
+────────────────────────────────────────
+ Ready to code?
+
+ Here is Claude's plan:
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+ Plan: add a fourth line to
+ docs/lab-notes.md
+
+ Context
+
+ docs/lab-notes.md is an untracked
+ throwaway file with a title, a blank
+ line, and three text lines (lines 4-6
+ currently, file is 6 lines). The user
+ wants one more line appended.
+
+ - Append a single new sentence as the
+   last line of docs/lab-notes.md,
+   matching the existing short
+   plain-sentence style (e.g. "Add new
+   notes below as the lab evolves.").
+ - Use Edit to add it after line 5,
+   keeping the trailing newline and not
+   touching the existing lines.
+ - Verify by reading the file back (or
+   git diff --no-index/cat) and confirm
+   the new line is present; no commit
+   unless asked.
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+────────────────────────────────────────
+ Claude has written up a plan and is
+ ready to execute. Would you like to
+ proceed?
+
+ ❯ 1. Yes, and use auto mode
+   2. Yes, manually approve edits
+   3. Tell Claude what to change
+      shift+tab to approve with this
+      feedback
+
+ ctrl+g to edit in nano ·
+ /tmp/claude-lab-run/config/plans/plan-
+ a-tiny-change-declarative-hinton.md

@@ -1,0 +1,18 @@
+ ▐▛███▛█   Claude Code v2.1.291
+▝▜██████▀  Sonnet 5.5 · Claude Max
+ ▝▝   ▝▝   /tmp/claude-lab/project
+
+
+❯ read the twelve src files one at a time with twelve separate Read calls, then
+  summarise
+
+  Reading 2 files, listing 1 directory… (ctrl+o to expand)
+  ⎿  src/module-2.ts
+
+* Forging… (6s · ↓ 402 tokens · thought for 1s)
+
+──────────────────────────────────────────────────────────────────────────────────
+❯
+──────────────────────────────────────────────────────────────────────────────────
+  sonnet · lab-project · main · ctx 12%
+  ⏸ manual mode on · ← for agents

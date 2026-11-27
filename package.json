@@ -1,0 +1,24 @@
+{
+  "name": "herdr",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24.7"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w herdr-web",
+    "start": "npm run start -w herdr-web",
+    "build": "npm run build -w herdr-web",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test:unit": "npm run test:unit --workspaces --if-present",
+    "test:e2e": "npm run test:e2e -w herdr-web",
+    "qa-core": "npm run qa-core -w herdr-web --",
+    "check": "npm run check --workspaces --if-present --"
+  }
+}
